@@ -7,7 +7,6 @@ package edu.pitt.battleshipgame.common.ships;
 
 import edu.pitt.battleshipgame.common.board.Board;
 import edu.pitt.battleshipgame.common.board.Coordinate;
-import edu.pitt.battleshipgame.common.ships.Ship.ShipType;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -19,18 +18,16 @@ import static org.junit.Assert.*;
  *
  * @author austinpilz
  */
-public class BattleshipTest {
+public class CarrierTest {
     
-    private static Battleship shipInstance;
+    private static Carrier shipInstance;
     
-    public BattleshipTest() 
-    {
-        //
+    public CarrierTest() {
     }
     
     @BeforeClass
     public static void setUpClass() {
-        shipInstance = new Battleship(new Coordinate(0,1), new Coordinate(4,5), new Board("Test Board"));
+        shipInstance = new Carrier(new Coordinate(0,1), new Coordinate(4,5), new Board("Test Board"));
     }
     
     @AfterClass
@@ -46,7 +43,7 @@ public class BattleshipTest {
     }
 
     /**
-     * Test of getLength method, of class Battleship.
+     * Test of getLength method, of class Carrier.
      */
     @Test
     public void testGetLength() {
@@ -56,7 +53,7 @@ public class BattleshipTest {
     }
 
     /**
-     * Test of maxAllowed method, of class Battleship.
+     * Test of maxAllowed method, of class Carrier.
      */
     @Test
     public void testMaxAllowed() {
@@ -66,7 +63,7 @@ public class BattleshipTest {
     }
 
     /**
-     * Test of getName method, of class Battleship.
+     * Test of getName method, of class Carrier.
      */
     @Test
     public void testGetName() {
@@ -76,12 +73,12 @@ public class BattleshipTest {
     }
 
     /**
-     * Test of getType method, of class Battleship.
+     * Test of getType method, of class Carrier.
      */
     @Test
     public void testGetType() {
-        ShipType expResult = shipInstance.TYPE;
-        ShipType result = shipInstance.getType();
+        Ship.ShipType expResult = shipInstance.TYPE;
+        Ship.ShipType result = shipInstance.getType();
         assertEquals("Ship.Type != ShipType.Battleship", expResult, result);
     }
     
