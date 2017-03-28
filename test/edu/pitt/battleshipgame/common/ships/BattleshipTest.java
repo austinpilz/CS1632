@@ -30,9 +30,7 @@ public class BattleshipTest {
     
     @BeforeClass
     public static void setUpClass() {
-        Coordinate c1 = new Coordinate(0,0);
-        Board board = new Board("Test Board");
-        battleshipInstance = new Battleship(c1, c1, board);
+        battleshipInstance = new Battleship(new Coordinate(0,1), new Coordinate(4,5), new Board("Test Board"));
     }
     
     @AfterClass
@@ -55,7 +53,7 @@ public class BattleshipTest {
         System.out.println("--Testing getLength()--");
         int expResult = battleshipInstance.LENGTH;
         int result = battleshipInstance.getLength();
-        assertEquals(expResult, result);
+        assertEquals("Battleship Length != getLength()", expResult, result);
     }
 
     /**
@@ -66,7 +64,7 @@ public class BattleshipTest {
         System.out.println("--Testing maxAllowed()--");
         int expResult = battleshipInstance.MAX_ALLOWED;
         int result = battleshipInstance.maxAllowed();
-        assertEquals(expResult, result);
+        assertEquals("Battleship Max != getMax()", expResult, result);
     }
 
     /**
@@ -77,7 +75,7 @@ public class BattleshipTest {
         System.out.println("--Testing getName()--");
         String expResult = battleshipInstance.NAME;
         String result = battleshipInstance.getName();
-        assertEquals(expResult, result);
+        assertEquals("Battleship Name != getName()", expResult, result);
     }
 
     /**
@@ -88,7 +86,7 @@ public class BattleshipTest {
         System.out.println("--Testing getType()--");
         ShipType expResult = battleshipInstance.TYPE;
         ShipType result = battleshipInstance.getType();
-        assertEquals(expResult, result);
+        assertEquals("Battleship.Type != ShipType.Battleship", expResult, result);
     }
     
 }
