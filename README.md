@@ -1,4 +1,24 @@
-# How to build
+#PITT CS1632 (Quality Assurance) - Project 3
+This is an individual project for CS1632 at the University of Pittsburgh. 
+
+## Project Description
+This will be an individual project. You will be responsible for implementing Junit tests for `edu.pitt.battleshipgame.common.board.*` and `edu.pitt.battleshipgame.common.ships.*.` You should use Mocks, Doubles, Fakes, and Stubs where appropriate.In addition to the Junit tests you will also write a PExpect test that will attempt to play a complete game. This test does not need to, and should not, implement any AI. Think of a configuration of the board that will allow a game to be over in as few moves as possible. This script will need to be multi-threaded since it will manage 2 clients and a server.
+
+NOTE: PExpect is not currently available on Windows. If you are on Windows you will have to use a Pitt Unix machine to do this. Alternatively, you could install a Linux distro in a VM or dual boot.
+
+Extra Credit: If you have an application that supports a GUI in addition to the CLI you may automate the GUI for extra credit. You should be able to accomplish this using a Junit framework and hooks into the Java swing objects to send button clicks. Other ideas for Extra Credit should be discussed with me in advance to make sure they are worthwhile.
+
+## Grading
+Each component (Junit and PExpect) will account for 50% of the grade. You will be graded on 4 categories:
+
+1) Test Completeness
+2) Test Correctness
+3) Code maintainability – Documentation, style, etc.
+4) Code modularity – Proper use of Mocks, Doubles, etc.
+
+Extra Credit cannot exceed 15% of the overall value of the assignment.
+
+## How to build
 
 You can build this project one at the command line with Apache Ant
 or through the NetBeans GUI.
