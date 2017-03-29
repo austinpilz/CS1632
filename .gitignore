@@ -2,3 +2,4 @@
 *.jar
 
 nbproject/private/private.properties
+/dist/
