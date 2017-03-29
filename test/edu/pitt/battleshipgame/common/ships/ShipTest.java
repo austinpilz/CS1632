@@ -91,7 +91,7 @@ public class ShipTest {
         shipObj = new ShipImpl(new Coordinate(1,1), new Coordinate(3,5), board);
         
         //Add board gets called upon contruction, so no need to call directly
-        ArrayList<Ship> boardShips = new ArrayList<Ship>(board.getShipList());
+        ArrayList<Ship> boardShips = new ArrayList<>(board.getShipList());
         
         boolean found = false;
         for (Ship ship : boardShips)
@@ -110,20 +110,12 @@ public class ShipTest {
      */
     @Test
     public void testRegisterHit() {
-        if (shipObj.getLength() > 1)
-        {
-            for (int i = 0; i < shipObj.getLength(); i++)
-            {
-                shipObj.registerHit();
-            }
-            
-            assertTrue(shipObj.isSunk());
-        }
-        else
+        for (int i = 0; i < shipObj.getLength(); i++)
         {
             shipObj.registerHit();
-            assertTrue(shipObj.isSunk());
         }
+
+        assertTrue(shipObj.isSunk());      
     }
 
     public class ShipImpl extends Ship {
