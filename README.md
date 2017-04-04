@@ -1,6 +1,11 @@
 #PITT CS1632 (Quality Assurance) - Project 3
 This is an individual project for CS1632 at the University of Pittsburgh. 
 
+##Running the PExpect
+1. Compile both client and server jars with `ant -Dconfig=Server` and `ant -Dconfig=Client`, respectively.
+2. Run `java -jar dist/Server/BattleshipServer.jar` in it's own terminal.
+3. Run `python run.py` in a second terminal. (Python 2.7)
+
 ## Project Description
 This will be an individual project. You will be responsible for implementing Junit tests for `edu.pitt.battleshipgame.common.board.*` and `edu.pitt.battleshipgame.common.ships.*.` You should use Mocks, Doubles, Fakes, and Stubs where appropriate.In addition to the Junit tests you will also write a PExpect test that will attempt to play a complete game. This test does not need to, and should not, implement any AI. Think of a configuration of the board that will allow a game to be over in as few moves as possible. This script will need to be multi-threaded since it will manage 2 clients and a server.
 
