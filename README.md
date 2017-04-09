@@ -1,7 +1,7 @@
 #PITT CS1632 (Quality Assurance) - Project 3
 This is an individual project for CS1632 at the University of Pittsburgh. 
 
-##Running the PExpect
+## Running the PExpect
 1. Compile both client and server jars with `ant -Dconfig=Server` and `ant -Dconfig=Client`, respectively.
 2. Run `java -jar dist/Server/BattleshipServer.jar` in it's own terminal.
 3. Run `python run.py` in a second terminal. (Python 2.7)
